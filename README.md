@@ -6,7 +6,7 @@ Fitur: status Terlaksana / Tidak terlaksana (dengan alasan), rekap tahunan, filt
 
 ## Pasang lewat GitHub Pages
 1. Buat repositori baru di github.com (nama bebas, misalnya `khutbah-2027`, pilih Public).
-2. Unggah semua isi folder ini (`index.html`, `sw.js`, `manifest.webmanifest`, folder `icons`) ke repositori.
+2. Unggah semua isi folder ini (semua file (`index.html`, `sw.js`, `manifest.webmanifest`, dan 4 file `.png`)) ke repositori.
 3. Buka Settings > Pages > Source: Deploy from a branch > Branch: `main`, folder `/ (root)` > Save.
 4. Tunggu 1-2 menit. Alamatnya: `https://NAMA-GITHUB-ANDA.github.io/khutbah-2027/`
 
