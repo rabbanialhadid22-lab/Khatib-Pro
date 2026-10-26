@@ -161,6 +161,50 @@ label.f small{font-weight:400;color:var(--muted)}
 .note{font-size:.82rem;color:var(--muted)}
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translate(-50%,20px);background:var(--em-950);color:#fff;border-radius:12px;padding:11px 18px;font-weight:600;font-size:.92rem;opacity:0;pointer-events:none;transition:.25s;z-index:99;max-width:calc(100% - 32px);text-align:center}
 .toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* KALENDER SETAHUN */
+.calbar{width:100%;margin-top:12px;display:flex;align-items:center;gap:14px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow)}
+.calbar:hover{border-color:var(--gold)}
+.calbar .ci{flex:0 0 auto;width:44px;height:44px;border-radius:12px;background:var(--em-900);color:var(--gold-l);display:grid;place-items:center}
+.calbar .ci svg{width:22px;height:22px}
+.calbar .ct{flex:1;min-width:0}
+.calbar .ct b{display:block;font-family:var(--serif);font-size:1.12rem;font-weight:600;line-height:1.25}
+.calbar .ct span{display:block;font-size:.88rem;color:var(--muted)}
+.calbar .ct span em{font-style:normal;font-weight:700;color:var(--rust)}
+.calbar>svg{width:20px;height:20px;color:var(--muted);flex:0 0 auto}
+dialog.cal{width:min(760px,calc(100% - 16px));max-height:calc(100dvh - 16px)}
+.cal .dh{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cal .db{padding:12px 14px 14px;gap:12px}
+.calsum{display:flex;flex-wrap:wrap;gap:8px}
+.calsum button{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:7px 11px;font-size:.82rem;font-weight:600;display:inline-flex;align-items:center;gap:7px;color:var(--ink)}
+.calsum button[aria-pressed="true"]{border-color:var(--em-900);box-shadow:inset 0 0 0 1px var(--em-900)}
+.calsum i{width:12px;height:12px;border-radius:50%;display:inline-block;background:var(--c);border:2px solid var(--c)}
+.calsum i.e{background:#fff;border:2px dashed #9bb0a7}
+.calsum b{font-family:var(--serif);font-size:1rem}
+.months{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media(min-width:560px){.months{grid-template-columns:repeat(3,1fr);gap:10px}}
+.mo{border:1px solid var(--line);border-radius:14px;padding:8px 9px 10px;background:#fbfcfb}
+.mo.cur{border-color:var(--gold);background:var(--gold-bg)}
+.mh{display:flex;justify-content:space-between;align-items:baseline;gap:6px;margin-bottom:7px}
+.mh b{font-family:var(--serif);font-weight:600;font-size:.98rem}
+.mh span{font-size:.72rem;font-weight:700;color:var(--muted);white-space:nowrap}
+.mh span.gap{color:var(--rust)}
+.mh span.ok{color:var(--em-700)}
+.fr{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.cd{aspect-ratio:1;border-radius:50%;border:2px solid transparent;display:grid;place-items:center;font-weight:700;font-size:.8rem;padding:0;line-height:1;min-width:0;font-variant-numeric:tabular-nums}
+.cd:hover{transform:scale(1.08)}
+.cd.s-empty{background:#fff;border:2px dashed #9bb0a7;color:var(--muted)}
+.cd.s-planned{background:var(--gold);color:var(--em-950);border-color:var(--gold)}
+.cd.s-done{background:var(--em-700);color:#fff;border-color:var(--em-700)}
+.cd.s-cancel{background:var(--rust);color:#fff;border-color:var(--rust)}
+.cd.nx{box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--em-900)}
+.cd.dim{opacity:.22}
+.fr .sp{aspect-ratio:1}
+.calnote{margin:0;font-size:.8rem;color:var(--muted)}
+.card.flash{animation:flash 1.8s ease-out 1}
+@keyframes flash{0%,35%{box-shadow:0 0 0 4px var(--gold),var(--shadow)}100%{box-shadow:var(--shadow)}}
+.card{scroll-margin-top:150px}
+@media (prefers-reduced-motion:reduce){.card.flash{animation:none;outline:3px solid var(--gold)}}
 footer{padding:0 0 40px;text-align:center;color:var(--muted);font-size:.8rem}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 @media(max-width:380px){.card{grid-template-columns:54px 1fr;gap:0 10px}.dt b{font-size:1.7rem}}
@@ -189,6 +233,7 @@ footer{padding:0 0 40px;text-align:center;color:var(--muted);font-size:.8rem}
   <section class="rekap" aria-label="Rekap tahun 2027">
     <div class="tiles" id="tiles"></div>
     <div class="meter" id="meter"></div>
+    <button class="calbar" id="btnCal" type="button"></button>
   </section>
 
   <section class="filters" aria-label="Filter">
@@ -209,6 +254,20 @@ footer{padding:0 0 40px;text-align:center;color:var(--muted);font-size:.8rem}
   <section class="list" id="list"></section>
   <footer>Data tersimpan di perangkat ini. Buat cadangan secara berkala lewat Pengaturan.</footer>
 </main>
+
+
+<!-- Dialog kalender setahun -->
+<dialog id="dCal" class="cal" aria-labelledby="calTitle">
+  <div class="dh">
+    <div><h2 id="calTitle">Kalender Jumat 2027</h2><p id="calSub"></p></div>
+    <button class="btn" type="button" id="calClose">Tutup</button>
+  </div>
+  <div class="db">
+    <div class="calsum" id="calSum" role="group" aria-label="Sorot status"></div>
+    <div class="months" id="months"></div>
+    <p class="calnote">Ketuk tanggal untuk menuju jadwalnya. Lingkaran bergaris putus-putus belum ada jadwal.</p>
+  </div>
+</dialog>
 
 <!-- Dialog edit -->
 <dialog id="dEdit">
@@ -454,7 +513,7 @@ function renderList(){
   $('monthline').innerHTML='<h3>'+title+'</h3><p>'+base.length+' Jumat · '+c.fill+' terisi · '+c.done+' terlaksana · '+c.cancel+' tidak terlaksana</p>';
   $('list').innerHTML=l.length?l.map(card).join(''):'<div class="emptystate">Tidak ada jadwal yang cocok. Ubah filter atau kata pencarian.</div>';
 }
-function renderAll(){renderNext();renderRekap();renderChips();renderList()}
+function renderAll(){renderNext();renderRekap();renderCalBar();renderChips();renderList();if($("dCal")&&$("dCal").open)renderCal()}
 
 /* ---- Dialog helpers ---- */
 function closeBtn(btn,dlg){$(btn).addEventListener('click',function(){$(dlg).close()})}
@@ -607,6 +666,65 @@ function checkReminders(manual){
   if(sent)lsSet(NKEY,notified);
   else if(manual===true)toast('Notifikasi aktif. Pengingat akan muncul di H-7 dan H-1.');
 }
+
+/* ---- Kalender setahun ---- */
+var calHi=null; // status yang disorot
+var CALSVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>';
+var CHEV='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>';
+function renderCalBar(){
+  var c=counts(fridays);
+  $('btnCal').innerHTML='<span class="ci">'+CALSVG+'</span><span class="ct"><b>Kalender setahun</b><span>'+
+    (c.empty?'<em>'+c.empty+' Jumat</em> belum ada jadwal dari '+c.total:'Semua '+c.total+' Jumat sudah ada jadwal')+'</span></span>'+CHEV;
+}
+function statusLabel(s){return {empty:'belum ada jadwal',planned:'terjadwal',done:'terlaksana',cancel:'tidak terlaksana'}[s]}
+function renderCal(){
+  var c=counts(fridays);
+  $('calSub').textContent=c.empty?c.empty+' dari '+c.total+' Jumat belum ada jadwal':'Semua '+c.total+' Jumat sudah ada jadwal';
+  var defs=[['empty','Belum ada jadwal',c.empty,'e'],['planned','Terjadwal',c.planned,'var(--gold)'],['done','Terlaksana',c.done,'var(--em-700)'],['cancel','Tidak terlaksana',c.cancel,'var(--rust)']];
+  $('calSum').innerHTML=defs.map(function(d){
+    return '<button type="button" data-hi="'+d[0]+'" aria-pressed="'+(calHi===d[0])+'"><i class="'+(d[3]==='e'?'e':'')+'" style="--c:'+(d[3]==='e'?'#9bb0a7':d[3])+'"></i>'+d[1]+' <b>'+d[2]+'</b></button>';
+  }).join('');
+  var up=fridays.filter(function(f){return diffDays(f)>=0});
+  var nx=up.find(function(x){var s=stOf(item(x));return s==='planned'||s==='empty'})||up[0];
+  var nowM=new Date();var curM=(nowM.getFullYear()===YEAR)?nowM.getMonth():-1;
+  var h='';
+  for(var m=0;m<12;m++){
+    var fm=fridays.filter(function(f){return f.month===m});
+    var mc=counts(fm);
+    var meta=mc.empty?'<span class="gap">'+mc.empty+' kosong</span>':'<span class="ok">Lengkap</span>';
+    h+='<div class="mo'+(m===curM?' cur':'')+'"><div class="mh"><b>'+BULAN[m]+'</b>'+meta+'</div><div class="fr">';
+    for(var i=0;i<5;i++){
+      var f=fm[i];
+      if(!f){h+='<span class="sp"></span>';continue}
+      var s=stOf(item(f));
+      var dim=calHi&&calHi!==s;
+      h+='<button type="button" class="cd s-'+s+(nx&&nx.key===f.key?' nx':'')+(dim?' dim':'')+'" data-jump="'+f.key+'" aria-label="'+esc(longDate(f))+', '+statusLabel(s)+'">'+f.day+'</button>';
+    }
+    h+='</div></div>';
+  }
+  $('months').innerHTML=h;
+}
+function openCal(){renderCal();$('dCal').showModal()}
+function jumpTo(key){
+  $('dCal').close();
+  view.month='all';view.status='all';view.q='';$('fStatus').value='all';$('fQuery').value='';
+  renderAll();
+  requestAnimationFrame(function(){
+    var el=document.getElementById('c-'+key);if(!el)return;
+    el.scrollIntoView({block:'start',behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+    el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');
+    setTimeout(function(){el.classList.remove('flash')},2200);
+  });
+}
+$('btnCal').addEventListener('click',openCal);
+$('calClose').addEventListener('click',function(){$('dCal').close()});
+$('dCal').addEventListener('click',function(e){
+  var j=e.target.closest('[data-jump]');
+  if(j){jumpTo(j.getAttribute('data-jump'));return}
+  var hbtn=e.target.closest('[data-hi]');
+  if(hbtn){var v=hbtn.getAttribute('data-hi');calHi=(calHi===v)?null:v;renderCal();return}
+  if(e.target===this)this.close(); // klik di luar kotak
+});
 
 /* ---- Pasang aplikasi dari Chrome ---- */
 var installEvt=null;
