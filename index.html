@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Khatib Pro — Jadwal Khutbah Jumat 2027</title>
+<meta name="theme-color" content="#06382c">
+<meta name="description" content="Pencatat jadwal khutbah Jumat tahun 2027 dengan pengingat H-7 dan H-1.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --em-950:#052a20; --em-900:#06382c; --em-800:#0a4d3c; --em-700:#106650; --em-100:#dcebe5; --em-50:#eef5f2;
+  --gold:#c6a04c; --gold-d:#9a7a2e; --gold-l:#ead9a8; --gold-bg:#f6efd9;
+  --bg:#f2f5f3; --surface:#ffffff; --ink:#14221d; --muted:#5f736b; --line:#dbe4df;
+  --rust:#a2442d; --rust-bg:#f8e9e4;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Figtree',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --shadow:0 1px 2px rgba(6,56,44,.06),0 8px 24px -12px rgba(6,56,44,.18);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;padding-bottom:env(safe-area-inset-bottom)}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+
+/* HERO */
+.hero{background:var(--em-900);color:#fff;position:relative;overflow:hidden;padding:calc(20px + env(safe-area-inset-top)) 0 84px}
+.hero::before{content:"";position:absolute;inset:0;opacity:.09;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23ead9a8' stroke-width='1'%3E%3Cpath d='M36 6l8 22 22 8-22 8-8 22-8-22-22-8 22-8z'/%3E%3Ccircle cx='36' cy='36' r='5'/%3E%3C/g%3E%3C/svg%3E")}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.hero .wrap{position:relative}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:600;font-size:1.05rem;letter-spacing:.02em;color:var(--gold-l)}
+.brand img{width:34px;height:34px;border-radius:9px;background:#fff;padding:2px}
+.iconbtn{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff;border-radius:12px;height:42px;padding:0 14px;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.9rem}
+.iconbtn:hover{background:rgba(255,255,255,.16)}
+.iconbtn svg{width:18px;height:18px}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(2rem,7vw,3.1rem);line-height:1.08;letter-spacing:-.01em;margin:30px 0 8px}
+.sub{margin:0;color:#cfe3da;max-width:46ch}
+
+/* NEXT */
+.next{margin-top:-58px;position:relative;z-index:2}
+.nextcard{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);border:1px solid var(--line);display:flex;gap:18px;align-items:center;padding:18px;flex-wrap:wrap}
+.nextcard.alert{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-bg),var(--shadow)}
+.nd{flex:0 0 auto;width:72px;text-align:center;background:var(--em-900);color:#fff;border-radius:14px;padding:8px 0 9px}
+.nd small{display:block;font-size:.7rem;color:var(--gold-l);letter-spacing:.04em}
+.nd b{display:block;font-family:var(--serif);font-size:1.9rem;line-height:1.05;font-weight:600}
+.nc{flex:1 1 220px;min-width:0}
+.nc .lbl{font-size:.85rem;color:var(--muted);margin:0}
+.nc h2{font-family:var(--serif);font-weight:600;font-size:1.25rem;line-height:1.25;margin:2px 0 2px;overflow-wrap:anywhere}
+.nc p{margin:0;color:var(--muted);font-size:.92rem;overflow-wrap:anywhere}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 11px;font-size:.8rem;font-weight:700;white-space:nowrap}
+.pill.gold{background:var(--gold-bg);color:#6f5516;border:1px solid var(--gold-l)}
+.pill.em{background:var(--em-50);color:var(--em-800);border:1px solid var(--em-100)}
+.pill.rust{background:var(--rust-bg);color:var(--rust);border:1px solid #efcfc5}
+.pill.mute{background:#eef1ef;color:var(--muted);border:1px solid var(--line)}
+.pill.ink{background:var(--em-900);color:var(--gold-l)}
+
+/* REKAP */
+.rekap{margin:22px 0 0}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:640px){.tiles{grid-template-columns:repeat(5,1fr)}}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 14px 12px;border-top:3px solid var(--line)}
+.tile b{display:block;font-family:var(--serif);font-size:2rem;line-height:1;font-weight:600}
+.tile span{display:block;margin-top:6px;font-size:.85rem;color:var(--muted)}
+.tile.t-total{border-top-color:var(--em-900)}
+.tile.t-fill{border-top-color:var(--gold)}
+.tile.t-done{border-top-color:var(--em-700)}
+.tile.t-cancel{border-top-color:var(--rust)}
+.tile.t-plan{border-top-color:var(--gold-l)}
+.meter{margin-top:12px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.meter .row{display:flex;justify-content:space-between;gap:12px;font-size:.88rem;color:var(--muted);margin-bottom:8px;flex-wrap:wrap}
+.meter .row strong{color:var(--ink)}
+.track{height:12px;border-radius:99px;background:#e9eeeb;overflow:hidden;display:flex}
+.track i{display:block;height:100%}
+.track .d{background:var(--em-700)} .track .c{background:var(--rust)} .track .p{background:var(--gold)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:.8rem;color:var(--muted)}
+.legend span:before{content:"";display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:6px;background:var(--c)}
+
+/* FILTER */
+.filters{position:sticky;top:0;z-index:20;background:rgba(242,245,243,.94);backdrop-filter:blur(8px);margin-top:22px;padding:10px 0 8px;border-bottom:1px solid var(--line)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 16px 6px;margin:0 -16px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 14px;font-weight:600;font-size:.9rem;color:var(--ink);display:inline-flex;gap:7px;align-items:center}
+.chip em{font-style:normal;font-size:.75rem;font-weight:700;color:var(--muted);background:#eef1ef;border-radius:99px;padding:1px 7px}
+.chip[aria-pressed="true"]{background:var(--em-900);border-color:var(--em-900);color:#fff}
+.chip[aria-pressed="true"] em{background:var(--gold);color:var(--em-950)}
+.frow{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
+.frow select,.frow input{height:42px;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:0 12px}
+.frow input{flex:1 1 160px;min-width:0}
+.frow select{flex:0 1 190px}
+.monthline{margin:16px 0 4px;display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.monthline h3{font-family:var(--serif);font-weight:600;font-size:1.35rem;margin:0}
+.monthline p{margin:0;color:var(--muted);font-size:.88rem}
+
+/* LIST */
+.list{display:grid;gap:12px;padding:8px 0 60px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);display:grid;grid-template-columns:64px 1fr;gap:0 14px;padding:14px;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--line)}
+.card.s-planned::before{background:var(--gold)}
+.card.s-done::before{background:var(--em-700)}
+.card.s-cancel::before{background:var(--rust)}
+.card.past{background:#fbfcfb}
+.dt{text-align:center;padding-top:2px}
+.dt small{display:block;font-size:.72rem;color:var(--muted);font-weight:600}
+.dt b{display:block;font-family:var(--serif);font-size:2rem;line-height:1.05;font-weight:600;color:var(--em-900)}
+.dt span{display:block;font-size:.8rem;font-weight:700;color:var(--gold-d)}
+.cb{min-width:0}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.cb h4{font-family:var(--serif);font-weight:600;font-size:1.12rem;line-height:1.3;margin:0 0 4px;overflow-wrap:anywhere}
+.cb h4.empty{color:var(--muted);font-weight:500;font-style:italic}
+.cb .m{margin:0;font-weight:600;overflow-wrap:anywhere}
+.cb .a{margin:2px 0 0;color:var(--muted);font-size:.9rem;overflow-wrap:anywhere}
+.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;font-size:.88rem}
+.links a,.links span{color:var(--em-700);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:5px;overflow-wrap:anywhere}
+.links a:hover{text-decoration:underline}
+.links svg{width:15px;height:15px;flex:0 0 auto}
+.reason{margin-top:10px;background:var(--rust-bg);border-left:3px solid var(--rust);border-radius:8px;padding:8px 12px;font-size:.88rem;color:#6e2c1b}
+.reason b{display:block}
+.acts{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px dashed var(--line)}
+.btn{height:42px;border-radius:12px;border:1px solid var(--line);background:var(--surface);padding:0 14px;font-weight:700;font-size:.9rem;display:inline-flex;align-items:center;gap:7px}
+.btn svg{width:17px;height:17px}
+.btn:hover{background:var(--em-50)}
+.btn.ok{background:var(--em-800);border-color:var(--em-800);color:#fff}
+.btn.ok:hover{background:var(--em-900)}
+.btn.no{color:var(--rust);border-color:#e3c3b9}
+.btn.no:hover{background:var(--rust-bg)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--em-950)}
+.btn.gold:hover{background:#d4b05c}
+.btn.ghost{border-color:transparent;color:var(--muted)}
+.spacer{flex:1}
+.emptystate{text-align:center;padding:48px 16px;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:18px}
+
+/* DIALOG */
+dialog{border:0;padding:0;border-radius:22px;width:min(560px,calc(100% - 24px));max-height:calc(100dvh - 24px);background:var(--surface);color:var(--ink);box-shadow:0 30px 80px -20px rgba(0,0,0,.45)}
+dialog::backdrop{background:rgba(5,42,32,.55);backdrop-filter:blur(2px)}
+dialog form{display:flex;flex-direction:column;max-height:calc(100dvh - 24px)}
+.dh{padding:18px 20px 12px;border-bottom:1px solid var(--line)}
+.dh h2{font-family:var(--serif);font-weight:600;font-size:1.35rem;margin:0}
+.dh p{margin:2px 0 0;color:var(--muted);font-size:.9rem}
+.db{padding:16px 20px;overflow:auto;display:grid;gap:14px}
+.df{padding:12px 20px 16px;border-top:1px solid var(--line);display:flex;gap:8px;flex-wrap:wrap}
+label.f{display:grid;gap:5px;font-weight:600;font-size:.9rem}
+label.f small{font-weight:400;color:var(--muted)}
+.f input,.f textarea,.f select{border:1px solid #c9d5cf;border-radius:12px;padding:10px 12px;background:#fff;width:100%;min-height:44px}
+.f textarea{resize:vertical;min-height:84px}
+.f input:focus,.f textarea:focus,.f select:focus{outline:3px solid var(--gold-l);border-color:var(--gold)}
+.sec{border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:10px;background:var(--em-50)}
+.sec h3{margin:0;font-size:.95rem}
+.sec p{margin:0;color:var(--muted);font-size:.88rem}
+.note{font-size:.82rem;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translate(-50%,20px);background:var(--em-950);color:#fff;border-radius:12px;padding:11px 18px;font-weight:600;font-size:.92rem;opacity:0;pointer-events:none;transition:.25s;z-index:99;max-width:calc(100% - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+footer{padding:0 0 40px;text-align:center;color:var(--muted);font-size:.8rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media(max-width:380px){.card{grid-template-columns:54px 1fr;gap:0 10px}.dt b{font-size:1.7rem}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="bar">
+      <div class="brand"><img src="icons/icon-192.png" alt="" width="30" height="30">Khatib Pro</div>
+      <button class="iconbtn" id="btnSet" type="button" aria-label="Buka pengaturan">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+        Pengaturan
+      </button>
+    </div>
+    <h1>Jadwal Khutbah Jumat<br>Tahun 2027</h1>
+    <p class="sub">Catat masjid, judul khutbah, dan statusnya. Pengingat muncul 1 minggu dan 1 hari sebelum jadwal.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="next" id="next" aria-live="polite"></section>
+
+  <section class="rekap" aria-label="Rekap tahun 2027">
+    <div class="tiles" id="tiles"></div>
+    <div class="meter" id="meter"></div>
+  </section>
+
+  <section class="filters" aria-label="Filter">
+    <div class="chips" id="chips" role="group" aria-label="Filter bulan"></div>
+    <div class="frow">
+      <select id="fStatus" aria-label="Filter status">
+        <option value="all">Semua status</option>
+        <option value="empty">Belum diisi</option>
+        <option value="planned">Terjadwal</option>
+        <option value="done">Terlaksana</option>
+        <option value="cancel">Tidak terlaksana</option>
+      </select>
+      <input id="fQuery" type="search" placeholder="Cari masjid atau judul" aria-label="Cari masjid atau judul">
+    </div>
+  </section>
+
+  <div class="monthline" id="monthline"></div>
+  <section class="list" id="list"></section>
+  <footer>Data tersimpan di perangkat ini. Buat cadangan secara berkala lewat Pengaturan.</footer>
+</main>
+
+<!-- Dialog edit -->
+<dialog id="dEdit">
+  <form method="dialog" id="fEdit" novalidate>
+    <div class="dh"><h2 id="eTitle">Isi jadwal</h2><p id="eSub"></p></div>
+    <div class="db">
+      <label class="f">Nama masjid<input id="eMasjid" autocomplete="off" placeholder="Contoh: Masjid Al-Ikhlas"></label>
+      <label class="f">Alamat masjid<textarea id="eAlamat" placeholder="Jalan, kelurahan, kota"></textarea></label>
+      <label class="f">Judul khutbah<input id="eJudul" autocomplete="off" placeholder="Contoh: Menjaga amanah di tengah kesibukan"></label>
+      <label class="f">Kontak takmir / pengurus<input id="eKontak" autocomplete="off" placeholder="Nama dan nomor, contoh: Pak Hasan 0812 3456 7890"></label>
+      <label class="f">Tautan Google Maps<small>Buka masjid di Google Maps, pilih Bagikan, lalu tempel tautannya di sini.</small><input id="eMaps" type="url" inputmode="url" placeholder="https://maps.app.goo.gl/..."></label>
+    </div>
+    <div class="df">
+      <button class="btn ghost" type="button" id="eClear">Kosongkan</button>
+      <span class="spacer"></span>
+      <button class="btn" type="button" id="eCancel">Batal</button>
+      <button class="btn gold" type="submit" id="eSave">Simpan jadwal</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Dialog tidak terlaksana -->
+<dialog id="dCancel">
+  <form method="dialog" id="fCancel">
+    <div class="dh"><h2>Tidak terlaksana</h2><p id="cSub"></p></div>
+    <div class="db">
+      <label class="f">Alasan
+        <select id="cReason">
+          <option>Sakit</option>
+          <option>Bentrok dengan jadwal lain</option>
+          <option>Dibatalkan pihak masjid</option>
+          <option>Cuaca atau bencana</option>
+          <option>Urusan keluarga</option>
+          <option>Halangan lain</option>
+        </select>
+      </label>
+      <label class="f">Keterangan tambahan<small>Boleh dikosongkan.</small><textarea id="cNote" placeholder="Tulis rincian singkat"></textarea></label>
+    </div>
+    <div class="df">
+      <span class="spacer"></span>
+      <button class="btn" type="button" id="cBack">Batal</button>
+      <button class="btn no" type="submit">Simpan keterangan</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Dialog pengaturan -->
+<dialog id="dSet">
+  <form method="dialog">
+    <div class="dh"><h2>Pengaturan</h2><p>Pengingat, kalender, dan cadangan data.</p></div>
+    <div class="db">
+      <div class="sec">
+        <h3>Pengingat H-7 dan H-1</h3>
+        <label class="f">Jam pengingat<input type="time" id="sHour"></label>
+        <div><button class="btn" type="button" id="sNotif">Aktifkan notifikasi</button></div>
+        <p id="sNotifState"></p>
+        <p class="note">Notifikasi muncul saat aplikasi dibuka atau berjalan di latar belakang. Untuk pengingat yang pasti berbunyi, tambahkan juga ke kalender di bawah.</p>
+      </div>
+      <div class="sec">
+        <h3>Pengingat di kalender HP</h3>
+        <p>Unduh file kalender berisi semua jadwal yang sudah diisi, lengkap dengan alarm 1 minggu dan 1 hari sebelumnya. Buka file itu untuk menambahkannya ke Google Calendar.</p>
+        <div><button class="btn" type="button" id="sIcs">Unduh file kalender (.ics)</button></div>
+      </div>
+      <div class="sec">
+        <h3>Cadangan data</h3>
+        <p>Data hanya tersimpan di perangkat ini. Simpan cadangan sebelum ganti HP atau membersihkan data browser.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn" type="button" id="sBackup">Simpan cadangan</button>
+          <button class="btn" type="button" id="sRestore">Pulihkan dari cadangan</button>
+          <input type="file" id="sFile" accept="application/json,.json" hidden>
+        </div>
+      </div>
+    </div>
+    <div class="df"><span class="spacer"></span><button class="btn gold" type="submit">Selesai</button></div>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+'use strict';
+var YEAR=2027, KEY='mimbar-khutbah-2027', SKEY='mimbar-settings-2027', NKEY='mimbar-notified-2027';
+var BULAN=['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+var BLN=['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'];
+var DAY=864e5;
+
+function pad(n){return String(n).padStart(2,'0')}
+function $(id){return document.getElementById(id)}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function lsGet(k,def){try{var v=localStorage.getItem(k);return v?JSON.parse(v):def}catch(e){return def}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}
+
+/* ---- Tanggal ---- */
+var fridays=[];
+for(var t=Date.UTC(YEAR,0,1);t<=Date.UTC(YEAR,11,31);t+=7*DAY){
+  var d=new Date(t);
+  fridays.push({key:d.getUTCFullYear()+'-'+pad(d.getUTCMonth()+1)+'-'+pad(d.getUTCDate()),utc:t,day:d.getUTCDate(),month:d.getUTCMonth()});
+}
+function todayUtc(){var n=new Date();return Date.UTC(n.getFullYear(),n.getMonth(),n.getDate())}
+function diffDays(f){return Math.round((f.utc-todayUtc())/DAY)}
+function longDate(f){return 'Jumat, '+f.day+' '+BULAN[f.month]+' '+YEAR}
+
+/* ---- Data ---- */
+var data=lsGet(KEY,{});
+var settings=lsGet(SKEY,{hour:'07:00'});
+var notified=lsGet(NKEY,{});
+var view={month:'all',status:'all',q:''};
+
+function item(f){return data[f.key]||{}}
+function filled(it){return !!(it.masjid||it.alamat||it.judul)}
+function stOf(it){
+  if(it.status==='done')return 'done';
+  if(it.status==='cancel')return 'cancel';
+  return filled(it)?'planned':'empty';
+}
+function persist(){if(!lsSet(KEY,data))toast('Gagal menyimpan. Penyimpanan browser penuh atau diblokir.')}
+
+/* ---- Toast ---- */
+var tt;function toast(m){var e=$('toast');e.textContent=m;e.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){e.classList.remove('show')},2600)}
+
+/* ---- Ikon ---- */
+var IC={
+ pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+ phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>',
+ edit:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>',
+ check:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>',
+ x:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>',
+ undo:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-15-6.7L3 13"/></svg>'
+};
+
+/* ---- Relatif ---- */
+function rel(n){
+  if(n===0)return 'Hari ini';
+  if(n===1)return 'Besok (H-1)';
+  if(n===7)return '1 minggu lagi (H-7)';
+  if(n>1&&n<7)return n+' hari lagi';
+  if(n>7&&n<14)return n+' hari lagi';
+  if(n>=14&&n<60)return Math.round(n/7)+' minggu lagi';
+  if(n>=60)return Math.round(n/30)+' bulan lagi';
+  if(n===-1)return 'Kemarin';
+  return Math.abs(n)+' hari lalu';
+}
+function badge(s){
+  return {empty:'<span class="pill mute">Belum diisi</span>',planned:'<span class="pill gold">Terjadwal</span>',done:'<span class="pill em">Terlaksana</span>',cancel:'<span class="pill rust">Tidak terlaksana</span>'}[s];
+}
+
+/* ---- Render: berikutnya ---- */
+function renderNext(){
+  var el=$('next');
+  var up=fridays.filter(function(f){return diffDays(f)>=0});
+  // utamakan jadwal yang masih menunggu
+  var f=up.find(function(x){var s=stOf(item(x));return s==='planned'||s==='empty'})||up[0];
+  if(!f){el.innerHTML='<div class="nextcard"><div class="nc"><p class="lbl">Tahun 2027</p><h2>Semua Jumat tahun ini sudah lewat</h2><p>Lihat rekap di bawah untuk ringkasan setahun.</p></div></div>';return}
+  var it=item(f),n=diffDays(f),s=stOf(it);
+  var alert=(n<=7&&(s==='planned'||s==='empty'));
+  var title=it.judul||(it.masjid?it.masjid:'Jadwal belum diisi');
+  var line=it.judul&&it.masjid?it.masjid:(it.alamat||'Ketuk Isi jadwal untuk melengkapi.');
+  var pill=alert?'<span class="pill gold">'+rel(n)+'</span>':'<span class="pill mute">'+rel(n)+'</span>';
+  el.innerHTML='<div class="nextcard'+(alert?' alert':'')+'">'+
+   '<div class="nd"><small>'+BLN[f.month]+'</small><b>'+f.day+'</b></div>'+
+   '<div class="nc"><p class="lbl">Jumat berikutnya · '+esc(longDate(f))+'</p><h2>'+esc(title)+'</h2><p>'+esc(line)+'</p></div>'+
+   '<div>'+pill+'</div>'+
+   '<button class="btn '+(s==='empty'?'gold':'')+'" type="button" data-act="edit" data-k="'+f.key+'">'+IC.edit+(s==='empty'?'Isi jadwal':'Ubah')+'</button>'+
+  '</div>';
+}
+
+/* ---- Render: rekap ---- */
+function counts(list){
+  var c={total:list.length,fill:0,done:0,cancel:0,planned:0,empty:0};
+  list.forEach(function(f){var it=item(f),s=stOf(it);if(filled(it))c.fill++;c[s]++});
+  return c;
+}
+function renderRekap(){
+  var c=counts(fridays);
+  $('tiles').innerHTML=
+   '<div class="tile t-total"><b>'+c.total+'</b><span>Jumat di 2027</span></div>'+
+   '<div class="tile t-fill"><b>'+c.fill+'</b><span>Jadwal terisi</span></div>'+
+   '<div class="tile t-done"><b>'+c.done+'</b><span>Terlaksana</span></div>'+
+   '<div class="tile t-cancel"><b>'+c.cancel+'</b><span>Tidak terlaksana</span></div>'+
+   '<div class="tile t-plan"><b>'+c.planned+'</b><span>Menunggu pelaksanaan</span></div>';
+  var pd=c.done/c.total*100,pc=c.cancel/c.total*100,pp=c.planned/c.total*100;
+  $('meter').innerHTML=
+   '<div class="row"><span><strong>'+c.done+' dari '+c.fill+'</strong> jadwal terisi sudah terlaksana</span><span>'+c.empty+' Jumat belum diisi</span></div>'+
+   '<div class="track" role="img" aria-label="Terlaksana '+c.done+', tidak terlaksana '+c.cancel+', menunggu '+c.planned+', belum diisi '+c.empty+'"><i class="d" style="width:'+pd+'%"></i><i class="c" style="width:'+pc+'%"></i><i class="p" style="width:'+pp+'%"></i></div>'+
+   '<div class="legend"><span style="--c:var(--em-700)">Terlaksana</span><span style="--c:var(--rust)">Tidak terlaksana</span><span style="--c:var(--gold)">Menunggu</span><span style="--c:#e9eeeb">Belum diisi</span></div>';
+}
+
+/* ---- Render: chip bulan ---- */
+function renderChips(){
+  var h='<button class="chip" type="button" data-m="all" aria-pressed="'+(view.month==='all')+'">Semua<em>'+fridays.length+'</em></button>';
+  for(var m=0;m<12;m++){
+    var n=fridays.filter(function(f){return f.month===m}).length;
+    h+='<button class="chip" type="button" data-m="'+m+'" aria-pressed="'+(view.month===m)+'">'+BLN[m]+'<em>'+n+'</em></button>';
+  }
+  $('chips').innerHTML=h;
+}
+
+/* ---- Render: daftar ---- */
+function visible(){
+  var q=view.q.trim().toLowerCase();
+  return fridays.filter(function(f){
+    if(view.month!=='all'&&f.month!==view.month)return false;
+    var it=item(f);
+    if(view.status!=='all'&&stOf(it)!==view.status)return false;
+    if(q){var hay=((it.masjid||'')+' '+(it.judul||'')+' '+(it.alamat||'')).toLowerCase();if(hay.indexOf(q)<0)return false}
+    return true;
+  });
+}
+function phoneOf(s){var m=String(s||'').match(/\+?\d[\d\s\-().]{7,}\d/);return m?m[0].replace(/[^\d+]/g,''):''}
+function safeUrl(u){u=String(u||'').trim();if(!u)return '';if(!/^https?:\/\//i.test(u))u='https://'+u;try{var x=new URL(u);return (x.protocol==='http:'||x.protocol==='https:')?x.href:''}catch(e){return ''}}
+
+function card(f){
+  var it=item(f),s=stOf(it),n=diffDays(f);
+  var past=n<0;
+  var h='<article class="card s-'+s+(past?' past':'')+'" id="c-'+f.key+'">';
+  h+='<div class="dt"><small>Jum</small><b>'+f.day+'</b><span>'+BLN[f.month]+'</span></div><div class="cb">';
+  h+='<div class="tags">'+badge(s)+(s==='planned'||s==='empty'?'<span class="pill '+((n>=0&&n<=7)?'ink':'mute')+'">'+rel(n)+'</span>':'')+'</div>';
+  h+= it.judul?'<h4>'+esc(it.judul)+'</h4>':'<h4 class="empty">Judul khutbah belum diisi</h4>';
+  if(it.masjid)h+='<p class="m">'+esc(it.masjid)+'</p>';
+  if(it.alamat)h+='<p class="a">'+esc(it.alamat)+'</p>';
+  var links='',mu=safeUrl(it.maps),ph=phoneOf(it.kontak);
+  if(mu)links+='<a href="'+esc(mu)+'" target="_blank" rel="noopener">'+IC.pin+'Buka peta</a>';
+  if(it.kontak){links+= ph?'<a href="tel:'+esc(ph)+'">'+IC.phone+esc(it.kontak)+'</a>':'<span>'+IC.phone+esc(it.kontak)+'</span>'}
+  if(links)h+='<div class="links">'+links+'</div>';
+  if(s==='cancel'){h+='<div class="reason"><b>'+esc(it.alasan||'Tidak terlaksana')+'</b>'+(it.catatan?esc(it.catatan):'')+'</div>'}
+  h+='</div><div class="acts">';
+  h+='<button class="btn" type="button" data-act="edit" data-k="'+f.key+'">'+IC.edit+(filled(it)?'Ubah':'Isi jadwal')+'</button>';
+  if(s==='done'||s==='cancel'){
+    h+='<button class="btn ghost" type="button" data-act="reset" data-k="'+f.key+'">'+IC.undo+'Batalkan status</button>';
+  }else{
+    h+='<span class="spacer"></span><button class="btn ok" type="button" data-act="done" data-k="'+f.key+'">'+IC.check+'Terlaksana</button>';
+    h+='<button class="btn no" type="button" data-act="cancel" data-k="'+f.key+'">'+IC.x+'Tidak terlaksana</button>';
+  }
+  h+='</div></article>';
+  return h;
+}
+function renderList(){
+  var l=visible();
+  var title=view.month==='all'?'Semua bulan':BULAN[view.month]+' '+YEAR;
+  var base=fridays.filter(function(f){return view.month==='all'||f.month===view.month});
+  var c=counts(base);
+  $('monthline').innerHTML='<h3>'+title+'</h3><p>'+base.length+' Jumat · '+c.fill+' terisi · '+c.done+' terlaksana · '+c.cancel+' tidak terlaksana</p>';
+  $('list').innerHTML=l.length?l.map(card).join(''):'<div class="emptystate">Tidak ada jadwal yang cocok. Ubah filter atau kata pencarian.</div>';
+}
+function renderAll(){renderNext();renderRekap();renderChips();renderList()}
+
+/* ---- Dialog helpers ---- */
+function closeBtn(btn,dlg){$(btn).addEventListener('click',function(){$(dlg).close()})}
+var editKey=null;
+function openEdit(k){
+  editKey=k;var f=fridays.find(function(x){return x.key===k}),it=item(f);
+  $('eTitle').textContent=filled(it)?'Ubah jadwal':'Isi jadwal';
+  $('eSub').textContent=longDate(f);
+  $('eMasjid').value=it.masjid||'';$('eAlamat').value=it.alamat||'';$('eJudul').value=it.judul||'';
+  $('eKontak').value=it.kontak||'';$('eMaps').value=it.maps||'';
+  $('dEdit').showModal();
+}
+$('fEdit').addEventListener('submit',function(){
+  if(!editKey)return;
+  var it=data[editKey]||{};
+  it.masjid=$('eMasjid').value.trim();it.alamat=$('eAlamat').value.trim();it.judul=$('eJudul').value.trim();
+  it.kontak=$('eKontak').value.trim();it.maps=$('eMaps').value.trim();
+  data[editKey]=it;persist();renderAll();toast('Jadwal disimpan');
+});
+$('eClear').addEventListener('click',function(){
+  if(!editKey)return;
+  if(!confirm('Kosongkan semua isian jadwal ini?'))return;
+  delete data[editKey];persist();$('dEdit').close();renderAll();toast('Jadwal dikosongkan');
+});
+closeBtn('eCancel','dEdit');
+
+var cancelKey=null;
+function openCancel(k){
+  cancelKey=k;var f=fridays.find(function(x){return x.key===k});
+  $('cSub').textContent=longDate(f);$('cReason').selectedIndex=0;$('cNote').value='';
+  $('dCancel').showModal();
+}
+$('fCancel').addEventListener('submit',function(){
+  var it=data[cancelKey]||{};it.status='cancel';it.alasan=$('cReason').value;it.catatan=$('cNote').value.trim();
+  data[cancelKey]=it;persist();renderAll();toast('Keterangan disimpan');
+});
+closeBtn('cBack','dCancel');
+
+document.addEventListener('click',function(e){
+  var b=e.target.closest('[data-act]');
+  if(b){
+    var k=b.getAttribute('data-k'),a=b.getAttribute('data-act'),it=data[k]||{};
+    if(a==='edit')openEdit(k);
+    else if(a==='cancel')openCancel(k);
+    else if(a==='done'){it.status='done';delete it.alasan;delete it.catatan;data[k]=it;persist();renderAll();toast('Ditandai terlaksana')}
+    else if(a==='reset'){delete it.status;delete it.alasan;delete it.catatan;data[k]=it;persist();renderAll();toast('Status dibatalkan')}
+    return;
+  }
+  var c=e.target.closest('.chip');
+  if(c){var m=c.getAttribute('data-m');view.month=m==='all'?'all':parseInt(m,10);renderChips();renderList();}
+});
+$('fStatus').addEventListener('change',function(){view.status=this.value;renderList()});
+$('fQuery').addEventListener('input',function(){view.q=this.value;renderList()});
+
+/* ---- Pengaturan ---- */
+function notifState(){
+  var el=$('sNotifState');
+  if(!('Notification' in window)){el.textContent='Browser ini tidak mendukung notifikasi. Gunakan file kalender.';$('sNotif').disabled=true;return}
+  var p=Notification.permission;
+  el.textContent=p==='granted'?'Notifikasi aktif.':(p==='denied'?'Notifikasi diblokir. Izinkan lewat pengaturan situs di browser.':'Notifikasi belum diaktifkan.');
+}
+$('btnSet').addEventListener('click',function(){$('sHour').value=settings.hour||'07:00';notifState();$('dSet').showModal()});
+$('sHour').addEventListener('change',function(){if(this.value){settings.hour=this.value;lsSet(SKEY,settings);toast('Jam pengingat '+this.value)}});
+$('sNotif').addEventListener('click',function(){
+  if(!('Notification' in window))return;
+  Notification.requestPermission().then(function(){notifState();checkReminders(true)});
+});
+function download(name,type,text){
+  var b=new Blob([text],{type:type}),u=URL.createObjectURL(b),a=document.createElement('a');
+  a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u)},4000);
+}
+$('sBackup').addEventListener('click',function(){
+  download('cadangan-khutbah-2027.json','application/json',JSON.stringify({app:'mimbar',year:YEAR,saved:new Date().toISOString(),settings:settings,data:data},null,2));
+  toast('Cadangan diunduh');
+});
+$('sRestore').addEventListener('click',function(){$('sFile').click()});
+$('sFile').addEventListener('change',function(){
+  var f=this.files[0];if(!f)return;var r=new FileReader();
+  r.onload=function(){
+    try{
+      var j=JSON.parse(r.result);if(!j||j.app!=='mimbar'||typeof j.data!=='object')throw 0;
+      if(!confirm('Pulihkan cadangan ini? Data di perangkat akan diganti.'))return;
+      data=j.data;if(j.settings&&j.settings.hour)settings=j.settings;
+      persist();lsSet(SKEY,settings);renderAll();toast('Data dipulihkan');
+    }catch(e){toast('File cadangan tidak valid')}
+  };
+  r.readAsText(f);this.value='';
+});
+function icsEsc(s){return String(s||'').replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\r?\n/g,'\\n')}
+$('sIcs').addEventListener('click',function(){
+  var hm=(settings.hour||'07:00').split(':'),mins=(parseInt(hm[0],10)||0)*60+(parseInt(hm[1],10)||0);
+  var L=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Khatib Pro//Khutbah 2027//ID','CALSCALE:GREGORIAN','X-WR-CALNAME:Khutbah Jumat 2027'];
+  var cnt=0,stamp=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d+/,'');
+  fridays.forEach(function(f){
+    var it=item(f);if(!filled(it)||it.status==='cancel')return;
+    cnt++;
+    var ds=f.key.replace(/-/g,''),nx=new Date(f.utc+DAY),de=nx.getUTCFullYear()+pad(nx.getUTCMonth()+1)+pad(nx.getUTCDate());
+    var sum='Khutbah Jumat'+(it.masjid?' - '+it.masjid:'');
+    var desc=[it.judul?'Judul: '+it.judul:'',it.alamat?'Alamat: '+it.alamat:'',it.kontak?'Kontak: '+it.kontak:'',safeUrl(it.maps)?'Peta: '+safeUrl(it.maps):''].filter(Boolean).join('\n');
+    L.push('BEGIN:VEVENT','UID:khutbah-'+ds+'@mimbar','DTSTAMP:'+stamp,'DTSTART;VALUE=DATE:'+ds,'DTEND;VALUE=DATE:'+de,'SUMMARY:'+icsEsc(sum));
+    if(desc)L.push('DESCRIPTION:'+icsEsc(desc));
+    if(it.alamat)L.push('LOCATION:'+icsEsc(it.alamat));
+    [[7,'1 minggu lagi'],[1,'Besok']].forEach(function(a){
+      L.push('BEGIN:VALARM','ACTION:DISPLAY','DESCRIPTION:'+icsEsc(a[1]+': '+sum),'TRIGGER:-PT'+(a[0]*1440-mins)+'M','END:VALARM');
+    });
+    L.push('END:VEVENT');
+  });
+  L.push('END:VCALENDAR');
+  if(!cnt){toast('Belum ada jadwal terisi untuk diekspor');return}
+  download('khutbah-2027.ics','text/calendar',L.join('\r\n'));
+  toast(cnt+' jadwal diekspor ke kalender');
+});
+
+/* ---- Notifikasi H-7 / H-1 ---- */
+function showNotif(title,body,tag){
+  var opts={body:body,tag:tag,icon:'icons/icon-192.png',badge:'icons/icon-192.png'};
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.getRegistration().then(function(r){
+      if(r&&r.showNotification)r.showNotification(title,opts);else new Notification(title,opts);
+    }).catch(function(){try{new Notification(title,opts)}catch(e){}});
+  }else{try{new Notification(title,opts)}catch(e){}}
+}
+function checkReminders(manual){
+  if(!('Notification' in window)||Notification.permission!=='granted')return;
+  var now=new Date(),hm=(settings.hour||'07:00').split(':');
+  var due=now.getHours()*60+now.getMinutes()>=(parseInt(hm[0],10)||0)*60+(parseInt(hm[1],10)||0);
+  if(!due)return;
+  var sent=0;
+  fridays.forEach(function(f){
+    var n=diffDays(f);if(n!==7&&n!==1)return;
+    var it=item(f),s=stOf(it);if(s==='done'||s==='cancel')return;
+    var key=f.key+'|'+n;if(notified[key])return;
+    notified[key]=1;sent++;
+    var head=(n===7?'1 minggu lagi':'Besok')+' · '+longDate(f);
+    var body=filled(it)?[it.masjid,it.judul].filter(Boolean).join(' — '):'Jadwal belum diisi. Ketuk untuk melengkapi.';
+    showNotif(head,body,key);
+  });
+  if(sent)lsSet(NKEY,notified);
+  else if(manual===true)toast('Notifikasi aktif. Pengingat akan muncul di H-7 dan H-1.');
+}
+
+/* ---- Mulai ---- */
+renderAll();
+checkReminders();
+setInterval(function(){checkReminders();renderNext()},60000);
+document.addEventListener('visibilitychange',function(){if(!document.hidden){checkReminders();renderAll()}});
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})})}
+})();
+</script>
+</body>
+</html>
