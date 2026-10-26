@@ -263,7 +263,7 @@ footer{padding:0 0 40px;text-align:center;color:var(--muted);font-size:.8rem}
       <div class="sec">
         <h3>Pengingat H-7 dan H-1</h3>
         <label class="f">Jam pengingat<input type="time" id="sHour"></label>
-        <div><button class="btn" type="button" id="sNotif">Aktifkan notifikasi</button></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" type="button" id="sNotif">Aktifkan notifikasi</button><button class="btn" type="button" id="sTest">Kirim notifikasi percobaan</button></div>
         <p id="sNotifState"></p>
         <p class="note">Notifikasi muncul saat aplikasi dibuka atau berjalan di latar belakang. Untuk pengingat yang pasti berbunyi, tambahkan juga ke kalender di bawah.</p>
       </div>
@@ -521,6 +521,18 @@ $('sHour').addEventListener('change',function(){if(this.value){settings.hour=thi
 $('sNotif').addEventListener('click',function(){
   if(!('Notification' in window))return;
   Notification.requestPermission().then(function(){notifState();checkReminders(true)});
+});
+$('sTest').addEventListener('click',function(){
+  if(!('Notification' in window)){toast('Browser ini tidak mendukung notifikasi');return}
+  function fire(){
+    var f=fridays.find(function(x){return diffDays(x)>=0})||fridays[0],it=item(f);
+    var body=filled(it)?[it.masjid,it.judul].filter(Boolean).join(' — '):'Jadwal belum diisi. Ketuk untuk melengkapi.';
+    showNotif('Percobaan · '+longDate(f),body,'tes-'+Date.now());
+    toast('Notifikasi percobaan dikirim. Lihat di bilah notifikasi HP.');
+  }
+  if(Notification.permission==='granted')fire();
+  else if(Notification.permission==='denied'){notifState();toast('Notifikasi diblokir. Izinkan lewat pengaturan situs di Chrome.')}
+  else Notification.requestPermission().then(function(p){notifState();if(p==='granted')fire()});
 });
 function download(name,type,text){
   var b=new Blob([text],{type:type}),u=URL.createObjectURL(b),a=document.createElement('a');
