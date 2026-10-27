@@ -60,6 +60,81 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(2rem,7vw,3.1rem);lin
 .ynow[hidden]{display:none}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .cd.s-empty.old{border-color:#d3ddd8;color:#aebcb5;background:transparent}
+
+/* TANGGAL HARI INI */
+.today{display:grid;grid-template-columns:1fr 1fr;margin-top:22px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);border-radius:16px;overflow:hidden}
+.today>div{padding:10px 14px;min-width:0}
+.today>div+div{border-left:1px solid rgba(255,255,255,.2)}
+.today small{display:block;font-size:.74rem;color:var(--gold-l);font-weight:600}
+.today b{display:block;font-family:var(--serif);font-weight:600;font-size:1.02rem;line-height:1.3;margin-top:1px}
+.today .fri{display:inline-block;margin-left:6px;font-family:var(--sans);font-size:.7rem;font-weight:700;background:var(--gold);color:var(--em-950);border-radius:99px;padding:1px 8px;vertical-align:middle}
+@media(max-width:360px){.today{grid-template-columns:1fr}.today>div+div{border-left:0;border-top:1px solid rgba(255,255,255,.2)}}
+h1{margin-top:24px}
+.hj{font-size:.78rem;color:var(--muted);font-weight:600}
+.nc p.hj{margin-top:2px;color:var(--gold-d)}
+.tags .hj{align-self:center}
+/* TOMBOL ALAT */
+.tools2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.toolbtn{display:flex;align-items:center;gap:10px;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px;box-shadow:var(--shadow);min-width:0}
+.toolbtn:hover{border-color:var(--gold)}
+.toolbtn .ci{flex:0 0 auto;width:38px;height:38px;border-radius:11px;background:var(--gold-bg);color:var(--gold-d);display:grid;place-items:center;border:1px solid var(--gold-l)}
+.toolbtn .ci svg{width:20px;height:20px}
+.toolbtn b{display:block;font-family:var(--serif);font-weight:600;font-size:.98rem;line-height:1.2}
+.toolbtn span.t{min-width:0}
+.toolbtn small{display:block;font-size:.76rem;color:var(--muted);line-height:1.25;margin-top:2px}
+/* ISI SETAHUN */
+dialog.bulk{width:min(1000px,calc(100% - 12px));max-height:calc(100dvh - 12px)}
+dialog.bulk form{max-height:calc(100dvh - 12px)}
+.bulk .dh,.sholat .dh{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bulk .db{gap:10px;padding:12px 14px}
+.chk{display:flex;align-items:center;gap:9px;font-size:.9rem;font-weight:600}
+.chk input{width:20px;height:20px;accent-color:var(--em-800)}
+.sec summary{font-weight:700;font-size:.92rem;cursor:pointer}
+.sec .grid2{display:grid;gap:8px;margin-top:10px}
+@media(min-width:700px){.sec .grid2{grid-template-columns:1fr 1fr}}
+.bin{border:1px solid #c9d5cf;border-radius:12px;padding:10px 12px;background:#fff;width:100%;min-height:44px}
+.bin:focus{outline:3px solid var(--gold-l);border-color:var(--gold)}
+.bg{margin-top:2px}
+.bg[hidden]{display:none}
+.bm{position:sticky;top:-1px;z-index:2;margin:8px 0 0;padding:7px 12px;background:var(--em-900);color:var(--gold-l);font-family:var(--serif);font-weight:600;font-size:1rem;border-radius:10px;display:flex;justify-content:space-between}
+.bm span{font-family:var(--sans);font-size:.78rem;font-weight:600;color:#cfe3da}
+.brow{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:10px 4px;border-bottom:1px solid var(--line)}
+.brow[hidden]{display:none}
+.brow.nx{background:var(--gold-bg);border-radius:10px}
+.bd{text-align:center;padding-top:2px}
+.bd b{display:block;font-family:var(--serif);font-size:1.5rem;line-height:1;font-weight:600;color:var(--em-900)}
+.bd span{display:block;font-size:.74rem;font-weight:700;color:var(--gold-d);margin-top:2px}
+.bd small{display:block;font-size:.66rem;color:var(--muted);line-height:1.2;margin-top:3px}
+.bd .pill{margin-top:4px;padding:1px 7px;font-size:.66rem}
+.bf{display:grid;gap:8px;min-width:0}
+.more summary{font-size:.82rem;color:var(--em-700);font-weight:600;cursor:pointer;padding:2px 0}
+.more .mg{display:grid;gap:8px;margin-top:6px}
+@media(min-width:760px){.bf{grid-template-columns:1fr 1fr}.more{grid-column:1/-1}.more .mg{grid-template-columns:repeat(3,1fr)}}
+.dirty{color:var(--rust);font-weight:700}
+.bulk .df .note{flex:1 1 100%;margin:0}
+/* JADWAL SHOLAT */
+dialog.sholat{width:min(760px,calc(100% - 12px));max-height:calc(100dvh - 12px)}
+dialog.sholat form{max-height:calc(100dvh - 12px)}
+.sholat .db{gap:10px;padding:12px 14px}
+.shctl{display:flex;gap:8px;flex-wrap:wrap}
+.shctl input{flex:1 1 160px;min-width:0}
+.shctl select{flex:1 1 150px;min-width:0;height:44px;border:1px solid #c9d5cf;border-radius:12px;padding:0 10px;background:#fff}
+.shst{margin:0;font-size:.84rem;color:var(--muted)}
+.shst.err{color:var(--rust);font-weight:600}
+.shwrap{overflow:auto;border:1px solid var(--line);border-radius:12px;max-height:56dvh}
+.shwrap table{width:100%;border-collapse:collapse;font-size:.84rem;font-variant-numeric:tabular-nums}
+.shwrap table{table-layout:fixed}
+.shwrap col.c0{width:25%}
+.shwrap th,.shwrap td{padding:8px 2px;text-align:center;white-space:nowrap}
+.shwrap th:first-child,.shwrap td:first-child{text-align:left;padding-left:8px}
+@media(max-width:480px){.shwrap table{font-size:.77rem}.shwrap table thead th{font-size:.68rem;letter-spacing:-.02em;padding:8px 0}}
+.shwrap thead th{position:sticky;top:0;background:var(--em-900);color:#fff;font-weight:600;font-size:.78rem;z-index:1}
+.shwrap tbody tr{border-top:1px solid var(--line)}
+.shwrap tr.fri{background:var(--gold-bg);font-weight:600}
+.shwrap tr.tod td:first-child{box-shadow:inset 4px 0 0 var(--em-800)}
+.shwrap tr.shm td{background:var(--em-50);color:var(--em-900);text-align:left;padding:7px 10px;font-family:var(--serif);font-weight:600;font-size:.92rem}
+.shwrap td.zh{color:var(--em-800);font-weight:700}
+.dsub{display:block;font-size:.7rem;color:var(--muted);font-weight:500}
 /* NEXT */
 .next{margin-top:-58px;position:relative;z-index:2}
 .nextcard{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);border:1px solid var(--line);display:flex;gap:18px;align-items:center;padding:18px;flex-wrap:wrap}
@@ -234,6 +309,7 @@ footer{padding:0 0 40px;text-align:center;color:var(--muted);font-size:.8rem}
         Pengaturan
       </button></div>
     </div>
+    <div class="today" id="today" aria-live="polite"></div>
     <h1>Jadwal Khutbah Jumat<br>Tahun <span id="hYear"></span></h1>
     <p class="sub">Catat masjid, judul khutbah, dan statusnya. Pengingat muncul 1 minggu dan 1 hari sebelum jadwal.</p>
     <div class="yearsw" role="group" aria-label="Pilih tahun">
@@ -252,6 +328,10 @@ footer{padding:0 0 40px;text-align:center;color:var(--muted);font-size:.8rem}
     <div class="tiles" id="tiles"></div>
     <div class="meter" id="meter"></div>
     <button class="calbar" id="btnCal" type="button"></button>
+    <div class="tools2">
+      <button class="toolbtn" id="btnBulk" type="button"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13"/><path d="m3 6 1 1 2-2M3 12l1 1 2-2M3 18l1 1 2-2"/></svg></span><span class="t"><b>Isi jadwal setahun</b><small>Satu tabel untuk semua Jumat</small></span></button>
+      <button class="toolbtn" id="btnSholat" type="button"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="t"><b>Jadwal sholat</b><small>Sepanjang tahun, online</small></span></button>
+    </div>
   </section>
 
   <section class="filters" aria-label="Filter">
@@ -345,6 +425,19 @@ footer{padding:0 0 40px;text-align:center;color:var(--muted);font-size:.8rem}
         <p class="note">Notifikasi muncul saat aplikasi dibuka atau berjalan di latar belakang. Untuk pengingat yang pasti berbunyi, tambahkan juga ke kalender di bawah.</p>
       </div>
       <div class="sec">
+        <h3>Tanggal Hijriah</h3>
+        <label class="f">Koreksi tanggal
+          <select id="sHAdj">
+            <option value="-2">Mundur 2 hari</option>
+            <option value="-1">Mundur 1 hari</option>
+            <option value="0">Sesuai perhitungan (Umm al-Qura)</option>
+            <option value="1">Maju 1 hari</option>
+            <option value="2">Maju 2 hari</option>
+          </select>
+        </label>
+        <p class="note">Tanggal Hijriah dihitung di HP dan bisa berbeda satu hari dari penetapan Kemenag RI. Sesuaikan di sini bila perlu.</p>
+      </div>
+      <div class="sec">
         <h3>Pengingat di kalender HP</h3>
         <p>Unduh file kalender berisi semua jadwal yang sudah diisi, lengkap dengan alarm 1 minggu dan 1 hari sebelumnya. Buka file itu untuk menambahkannya ke Google Calendar.</p>
         <div><button class="btn" type="button" id="sIcs">Unduh file kalender (.ics)</button></div>
@@ -362,6 +455,60 @@ footer{padding:0 0 40px;text-align:center;color:var(--muted);font-size:.8rem}
     <div class="df"><span class="spacer"></span><button class="btn gold" type="submit">Selesai</button></div>
   </form>
 </dialog>
+
+<!-- Dialog isi jadwal setahun -->
+<dialog id="dBulk" class="bulk" aria-labelledby="bTitle">
+  <form method="dialog" id="fBulk" novalidate>
+    <div class="dh">
+      <div><h2 id="bTitle">Isi jadwal setahun</h2><p id="bSub"></p></div>
+      <button class="btn" type="button" id="bClose">Tutup</button>
+    </div>
+    <div class="db">
+      <details class="sec" id="bAll">
+        <summary>Isi sama untuk semua baris yang masih kosong</summary>
+        <p class="note" style="margin-top:8px">Cocok kalau masjidnya sama untuk banyak Jumat. Hanya baris yang nama masjidnya masih kosong yang terisi.</p>
+        <div class="grid2">
+          <input class="bin" id="aMasjid" list="dlMasjid" placeholder="Nama masjid" aria-label="Nama masjid untuk semua baris kosong">
+          <input class="bin" id="aAlamat" placeholder="Alamat masjid" aria-label="Alamat masjid untuk semua baris kosong">
+          <input class="bin" id="aKontak" placeholder="Kontak takmir (nama dan nomor)" aria-label="Kontak untuk semua baris kosong">
+          <input class="bin" id="aMaps" inputmode="url" placeholder="Tautan Google Maps" aria-label="Tautan peta untuk semua baris kosong">
+        </div>
+        <div style="margin-top:10px"><button class="btn" type="button" id="aApply">Terapkan ke baris kosong</button></div>
+      </details>
+      <label class="chk"><input type="checkbox" id="bHide"> Sembunyikan Jumat yang sudah lewat</label>
+      <div id="bRows"></div>
+    </div>
+    <div class="df">
+      <span class="note" id="bCount"></span>
+      <span class="spacer"></span>
+      <button class="btn" type="button" id="bCancel">Batal</button>
+      <button class="btn gold" type="submit" id="bSave">Simpan semua</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Dialog jadwal sholat -->
+<dialog id="dSholat" class="sholat" aria-labelledby="shTitle">
+  <form method="dialog">
+    <div class="dh">
+      <div><h2 id="shTitle">Jadwal sholat</h2><p id="shSub"></p></div>
+      <button class="btn" type="button" id="shClose">Tutup</button>
+    </div>
+    <div class="db">
+      <div class="shctl">
+        <input class="bin" id="shCity" list="dlCity" placeholder="Kota, contoh: Bandung" autocomplete="off" aria-label="Kota">
+        <button class="btn gold" type="button" id="shGo">Tampilkan</button>
+        <button class="btn" type="button" id="shGeo">Lokasi saya</button>
+      </div>
+      <div class="shctl"><select id="shView" aria-label="Tampilan"></select></div>
+      <p class="shst" id="shStatus" role="status"></p>
+      <div class="shwrap" id="shTable"></div>
+      <p class="note">Baris emas adalah hari Jumat. Waktu Zuhur pada hari Jumat bisa jadi patokan waktu khutbah. Sumber: Aladhan (metode Kemenag RI). Bisa berbeda 1 sampai 2 menit dari jadwal masjid setempat.</p>
+    </div>
+  </form>
+</dialog>
+<datalist id="dlMasjid"></datalist>
+<datalist id="dlCity"></datalist>
 
 <div class="toast" id="toast" role="status"></div>
 
@@ -416,6 +563,28 @@ function stOf(it){
 }
 function persist(){if(!lsSet(KEY,data))toast('Gagal menyimpan. Penyimpanan browser penuh atau diblokir.')}
 
+/* ---- Hijriah & hari ini ---- */
+var DAYS=['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
+var HMON=['Muharram','Safar','Rabiul Awal','Rabiul Akhir','Jumadil Awal','Jumadil Akhir','Rajab','Syakban','Ramadan','Syawal','Zulkaidah','Zulhijah'];
+var hFmt=null;
+try{hFmt=new Intl.DateTimeFormat('en-u-ca-islamic-umalqura-nu-latn',{day:'numeric',month:'numeric',year:'numeric',timeZone:'UTC'})}catch(e){hFmt=null}
+function hijri(utc){
+  if(!hFmt)return null;
+  try{
+    var adj=parseInt(settings.hijriAdj,10)||0,o={};
+    hFmt.formatToParts(new Date(utc+adj*DAY+12*36e5)).forEach(function(x){o[x.type]=x.value});
+    var d=parseInt(o.day,10),m=parseInt(o.month,10),y=parseInt(o.year,10);
+    if(!d||!m||!y||m<1||m>12)return null;
+    return {d:d,m:m,y:y,text:d+' '+HMON[m-1]+' '+y+' H'};
+  }catch(e){return null}
+}
+function renderToday(){
+  var t=todayUtc(),f=F(t),h=hijri(t),isFri=new Date(t).getUTCDay()===5;
+  $('today').innerHTML=
+    '<div><small>Masehi</small><b>'+DAYS[new Date(t).getUTCDay()]+', '+f.day+' '+BULAN[f.month]+' '+f.year+(isFri?'<span class="fri">Jumat</span>':'')+'</b></div>'+
+    '<div><small>Hijriah</small><b>'+(h?h.text:'Tidak tersedia di browser ini')+'</b></div>';
+}
+
 /* ---- Toast ---- */
 var tt;function toast(m){var e=$('toast');e.textContent=m;e.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){e.classList.remove('show')},2600)}
 
@@ -449,14 +618,14 @@ function badge(s){
 function renderNext(){
   var el=$('next');
   var f=upcomingFriday();
-  var it=item(f),n=diffDays(f),s=stOf(it);
+  var it=item(f),n=diffDays(f),s=stOf(it),hj=hijri(f.utc);
   var alert=(n<=7&&(s==='planned'||s==='empty'));
   var title=it.judul||(it.masjid?it.masjid:'Jadwal belum diisi');
   var line=it.judul&&it.masjid?it.masjid:(it.alamat||'Ketuk Isi jadwal untuk melengkapi.');
   var pill=alert?'<span class="pill gold">'+rel(n)+'</span>':'<span class="pill mute">'+rel(n)+'</span>';
   el.innerHTML='<div class="nextcard'+(alert?' alert':'')+'">'+
    '<div class="nd"><small>'+BLN[f.month]+'</small><b>'+f.day+'</b></div>'+
-   '<div class="nc"><p class="lbl">Jumat berikutnya · '+esc(longDate(f))+'</p><h2>'+esc(title)+'</h2><p>'+esc(line)+'</p></div>'+
+   '<div class="nc"><p class="lbl">Jumat berikutnya · '+esc(longDate(f))+'</p><h2>'+esc(title)+'</h2><p>'+esc(line)+'</p>'+(hj?'<p class="hj">'+hj.text+'</p>':'')+'</div>'+
    '<div>'+pill+'</div>'+
    '<button class="btn '+(s==='empty'?'gold':'')+'" type="button" data-act="edit" data-k="'+f.key+'">'+IC.edit+(s==='empty'?'Isi jadwal':'Ubah')+'</button>'+
   '</div>';
@@ -512,7 +681,7 @@ function card(f){
   var past=n<0;
   var h='<article class="card s-'+s+(past?' past':'')+'" id="c-'+f.key+'">';
   h+='<div class="dt"><small>Jum</small><b>'+f.day+'</b><span>'+BLN[f.month]+'</span></div><div class="cb">';
-  h+='<div class="tags">'+badge(s)+(s==='planned'||s==='empty'?'<span class="pill '+((n>=0&&n<=7)?'ink':'mute')+'">'+rel(n)+'</span>':'')+'</div>';
+  h+='<div class="tags">'+badge(s)+(s==='planned'||s==='empty'?'<span class="pill '+((n>=0&&n<=7)?'ink':'mute')+'">'+rel(n)+'</span>':'')+(hijri(f.utc)?'<span class="hj">'+hijri(f.utc).text+'</span>':'')+'</div>';
   h+= it.judul?'<h4>'+esc(it.judul)+'</h4>':'<h4 class="empty">Judul khutbah belum diisi</h4>';
   if(it.masjid)h+='<p class="m">'+esc(it.masjid)+'</p>';
   if(it.alamat)h+='<p class="a">'+esc(it.alamat)+'</p>';
@@ -540,7 +709,7 @@ function renderList(){
   $('monthline').innerHTML='<h3>'+title+'</h3><p>'+base.length+' Jumat · '+c.fill+' terisi · '+c.done+' terlaksana · '+c.cancel+' tidak terlaksana</p>';
   $('list').innerHTML=l.length?l.map(card).join(''):'<div class="emptystate">Tidak ada jadwal yang cocok. Ubah filter atau kata pencarian.</div>';
 }
-function renderAll(){renderYear();renderNext();renderRekap();renderCalBar();renderChips();renderList();if($("dCal")&&$("dCal").open)renderCal()}
+function renderAll(){renderToday();renderYear();renderNext();renderRekap();renderCalBar();renderChips();renderList();if($("dCal")&&$("dCal").open)renderCal()}
 
 /* ---- Dialog helpers ---- */
 function closeBtn(btn,dlg){$(btn).addEventListener('click',function(){$(dlg).close()})}
@@ -602,7 +771,8 @@ function notifState(){
   var p=Notification.permission;
   el.textContent=p==='granted'?'Notifikasi aktif.':(p==='denied'?'Notifikasi diblokir. Izinkan lewat pengaturan situs di browser.':'Notifikasi belum diaktifkan.');
 }
-$('btnSet').addEventListener('click',function(){$('sHour').value=settings.hour||'07:00';notifState();$('dSet').showModal()});
+$('btnSet').addEventListener('click',function(){$('sHAdj').value=String(parseInt(settings.hijriAdj,10)||0);$('sHour').value=settings.hour||'07:00';notifState();$('dSet').showModal()});
+$('sHAdj').addEventListener('change',function(){settings.hijriAdj=parseInt(this.value,10)||0;lsSet(SKEY,settings);renderAll();toast('Koreksi Hijriah disimpan')});
 $('sHour').addEventListener('change',function(){if(this.value){settings.hour=this.value;lsSet(SKEY,settings);toast('Jam pengingat '+this.value)}});
 $('sNotif').addEventListener('click',function(){
   if(!('Notification' in window))return;
@@ -780,6 +950,244 @@ $('yPrev').addEventListener('click',function(){setYear(view.year-1)});
 $('yNext').addEventListener('click',function(){setYear(view.year+1)});
 $('yNow').addEventListener('click',function(){setYear(NOW_YEAR)});
 
+/* ---- Isi jadwal setahun ---- */
+var bulkDirty=false,bulkYear=0;
+var FIELDS=['masjid','alamat','judul','kontak','maps'];
+function knownMosques(){
+  var m={};
+  function add(n,al,ko,mp){
+    n=String(n||'').trim();if(!n)return;
+    var k=n.toLowerCase();if(!m[k])m[k]={nama:n,alamat:'',kontak:'',maps:''};
+    if(al&&!m[k].alamat)m[k].alamat=al;if(ko&&!m[k].kontak)m[k].kontak=ko;if(mp&&!m[k].maps)m[k].maps=mp;
+  }
+  Object.keys(data).forEach(function(k){var it=data[k];if(it)add(it.masjid,it.alamat,it.kontak,it.maps)});
+  document.querySelectorAll('#bRows .brow').forEach(function(r){var v=rowVals(r);add(v.masjid,v.alamat,v.kontak,v.maps)});
+  return m;
+}
+function refreshMasjidList(){
+  var m=knownMosques();
+  $('dlMasjid').innerHTML=Object.keys(m).sort().map(function(k){return '<option value="'+esc(m[k].nama)+'"></option>'}).join('');
+  return m;
+}
+function bulkRow(f,nx){
+  var it=item(f),s=stOf(it),hj=hijri(f.utc),past=diffDays(f)<0;
+  var lab=esc(longDate(f));
+  var more=(it.alamat||it.kontak||it.maps);
+  return '<div class="brow'+(nx?' nx':'')+'" data-k="'+f.key+'" data-past="'+(past?1:0)+'">'+
+    '<div class="bd"><b>'+f.day+'</b><span>'+BLN[f.month]+'</span><small>'+(hj?hj.d+' '+HMON[hj.m-1]:'')+'</small>'+((s==='done'||s==='cancel')?badge(s):'')+'</div>'+
+    '<div class="bf">'+
+      '<input class="bin b-masjid" list="dlMasjid" autocomplete="off" placeholder="Nama masjid" aria-label="Nama masjid, '+lab+'" value="'+esc(it.masjid||'')+'">'+
+      '<input class="bin b-judul" autocomplete="off" placeholder="Judul khutbah" aria-label="Judul khutbah, '+lab+'" value="'+esc(it.judul||'')+'">'+
+      '<details class="more"'+(more?' open':'')+'><summary>Alamat, kontak, dan peta</summary><div class="mg">'+
+        '<input class="bin b-alamat" placeholder="Alamat masjid" aria-label="Alamat, '+lab+'" value="'+esc(it.alamat||'')+'">'+
+        '<input class="bin b-kontak" placeholder="Kontak takmir" aria-label="Kontak, '+lab+'" value="'+esc(it.kontak||'')+'">'+
+        '<input class="bin b-maps" inputmode="url" placeholder="Tautan Google Maps" aria-label="Tautan peta, '+lab+'" value="'+esc(it.maps||'')+'">'+
+      '</div></details>'+
+    '</div></div>';
+}
+function bulkApplyHide(){
+  var hide=$('bHide').checked;
+  document.querySelectorAll('#bRows .bg').forEach(function(g){
+    var any=false;
+    g.querySelectorAll('.brow').forEach(function(r){var h=hide&&r.getAttribute('data-past')==='1';r.hidden=h;if(!h)any=true});
+    g.hidden=!any;
+  });
+}
+function bulkCount(){
+  var rows=document.querySelectorAll('#bRows .brow'),n=0;
+  rows.forEach(function(r){if(rowVals(r).masjid||rowVals(r).judul)n++});
+  $('bCount').innerHTML=rows.length+' Jumat · <b>'+n+'</b> terisi'+(bulkDirty?' · <span class="dirty">belum disimpan</span>':'');
+}
+function rowVals(r){
+  return {masjid:r.querySelector('.b-masjid').value.trim(),judul:r.querySelector('.b-judul').value.trim(),alamat:r.querySelector('.b-alamat').value.trim(),kontak:r.querySelector('.b-kontak').value.trim(),maps:r.querySelector('.b-maps').value.trim()};
+}
+function openBulk(){
+  bulkYear=view.year;bulkDirty=false;
+  $('bTitle').textContent='Isi jadwal tahun '+bulkYear;
+  $('bSub').textContent=fridays.length+' hari Jumat. Isi seperlunya, lalu ketuk Simpan semua.';
+  var nx=upcomingFriday(),h='';
+  for(var m=0;m<12;m++){
+    var fm=fridays.filter(function(f){return f.month===m});
+    h+='<section class="bg"><div class="bm">'+BULAN[m]+'<span>'+fm.length+' Jumat</span></div>'+fm.map(function(f){return bulkRow(f,nx&&nx.key===f.key)}).join('')+'</section>';
+  }
+  $('bRows').innerHTML=h;
+  $('bHide').checked=(bulkYear===NOW_YEAR);
+  ['aMasjid','aAlamat','aKontak','aMaps'].forEach(function(id){$(id).value=''});
+  $('bAll').open=false;
+  refreshMasjidList();bulkApplyHide();bulkCount();
+  $('dBulk').showModal();
+}
+function closeBulk(force){
+  if(!force&&bulkDirty&&!confirm('Ada perubahan yang belum disimpan. Tutup tanpa menyimpan?'))return;
+  bulkDirty=false;$('dBulk').close();
+}
+$('btnBulk').addEventListener('click',openBulk);
+$('bClose').addEventListener('click',function(){closeBulk(false)});
+$('bCancel').addEventListener('click',function(){closeBulk(false)});
+$('dBulk').addEventListener('cancel',function(e){if(bulkDirty&&!confirm('Ada perubahan yang belum disimpan. Tutup tanpa menyimpan?'))e.preventDefault();else bulkDirty=false});
+$('bHide').addEventListener('change',bulkApplyHide);
+$('bRows').addEventListener('input',function(){bulkDirty=true;bulkCount()});
+$('bRows').addEventListener('change',function(e){
+  var el=e.target;if(!el.classList.contains('b-masjid'))return;
+  var m=refreshMasjidList(),known=m[el.value.trim().toLowerCase()];
+  if(!known)return;
+  el.value=known.nama;
+  var row=el.closest('.brow'),filledAny=false;
+  [['alamat','.b-alamat'],['kontak','.b-kontak'],['maps','.b-maps']].forEach(function(p){
+    var i=row.querySelector(p[1]);
+    if(!i.value.trim()&&known[p[0]]){i.value=known[p[0]];filledAny=true}
+  });
+  if(filledAny)row.querySelector('.more').open=true;
+  bulkDirty=true;bulkCount();
+});
+$('aApply').addEventListener('click',function(){
+  var v={masjid:$('aMasjid').value.trim(),alamat:$('aAlamat').value.trim(),kontak:$('aKontak').value.trim(),maps:$('aMaps').value.trim()};
+  if(!v.masjid){toast('Isi nama masjid dulu');$('aMasjid').focus();return}
+  var hide=$('bHide').checked,n=0;
+  document.querySelectorAll('#bRows .brow').forEach(function(r){
+    if(hide&&r.getAttribute('data-past')==='1')return;
+    if(r.querySelector('.b-masjid').value.trim())return;
+    r.querySelector('.b-masjid').value=v.masjid;
+    r.querySelector('.b-alamat').value=v.alamat;
+    r.querySelector('.b-kontak').value=v.kontak;
+    r.querySelector('.b-maps').value=v.maps;
+    if(v.alamat||v.kontak||v.maps)r.querySelector('.more').open=true;
+    n++;
+  });
+  refreshMasjidList();
+  if(n){bulkDirty=true;bulkCount()}
+  toast(n?n+' baris diisi':'Tidak ada baris kosong yang bisa diisi');
+});
+$('fBulk').addEventListener('submit',function(){
+  var changed=0;
+  document.querySelectorAll('#bRows .brow').forEach(function(r){
+    var k=r.getAttribute('data-k'),v=rowVals(r),old=data[k]||{},diff=false;
+    FIELDS.forEach(function(x){if((old[x]||'')!==v[x])diff=true});
+    if(!diff)return;
+    var it=old;FIELDS.forEach(function(x){it[x]=v[x]});
+    var any=FIELDS.some(function(x){return it[x]});
+    if(!any&&!it.status)delete data[k];else data[k]=it;
+    changed++;
+  });
+  bulkDirty=false;
+  if(changed)persist();
+  renderAll();
+  toast(changed?changed+' jadwal disimpan':'Tidak ada perubahan');
+});
+
+/* ---- Jadwal sholat online ---- */
+var CITIES=['Jakarta','Bandung','Surabaya','Medan','Semarang','Makassar','Palembang','Depok','Tangerang','Bekasi','Bogor','Yogyakarta','Surakarta','Malang','Denpasar','Batam','Pekanbaru','Bandar Lampung','Padang','Banjarmasin','Pontianak','Balikpapan','Samarinda','Manado','Mataram','Kupang','Ambon','Jayapura','Banda Aceh','Serang','Cirebon','Jambi','Bengkulu','Palu','Kendari','Ternate','Tasikmalaya','Sukabumi','Purwokerto','Kediri','Pekalongan','Gorontalo','Pangkalpinang','Tanjungpinang'];
+$('dlCity').innerHTML=CITIES.map(function(c){return '<option value="'+c+'"></option>'}).join('');
+var WD=['Min','Sen','Sel','Rab','Kam','Jum','Sab'];
+var sh={loc:settings.loc||{q:'Jakarta'},rec:null,year:0,busy:false};
+function locKey(l){return l.lat!=null?('ll'+Number(l.lat).toFixed(2)+'_'+Number(l.lng).toFixed(2)):('c_'+String(l.q).toLowerCase().replace(/[^a-z0-9]+/g,'-'))}
+function shCacheKey(y,l){return 'khatib-sholat-'+y+'-'+locKey(l)}
+function fetchJson(url){
+  var ctl=('AbortController' in window)?new AbortController():null,tm=setTimeout(function(){if(ctl)ctl.abort()},20000);
+  return fetch(url,ctl?{signal:ctl.signal}:{}).then(function(r){clearTimeout(tm);if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).catch(function(e){clearTimeout(tm);throw e});
+}
+function apiUrl(y,l,m){
+  var q,path;
+  if(l.lat!=null){path='calendar';q='latitude='+encodeURIComponent(l.lat)+'&longitude='+encodeURIComponent(l.lng)}
+  else{var p=String(l.q).split(','),city=p[0].trim(),country=p.slice(1).join(',').trim()||'Indonesia';path='calendarByCity';q='city='+encodeURIComponent(city)+'&country='+encodeURIComponent(country)}
+  return 'https://api.aladhan.com/v1/'+path+'/'+y+(m?'/'+m:'')+'?'+q+'&method=20'+(m?'':'&annual=true');
+}
+function collect(json,days,meta){
+  if(!json||!json.data||(json.code&&json.code!==200))throw new Error('format');
+  var arr=[];
+  if(Array.isArray(json.data))arr=json.data;else Object.keys(json.data).forEach(function(k){arr=arr.concat(json.data[k])});
+  arr.forEach(function(e){
+    var g=e&&e.date&&e.date.gregorian,t=e&&e.timings;if(!g||!t)return;
+    var key=pad(parseInt(g.month.number,10))+'-'+pad(parseInt(g.day,10));
+    days[key]=[t.Fajr,t.Sunrise,t.Dhuhr,t.Asr,t.Maghrib,t.Isha].map(function(x){return String(x||'--:--').slice(0,5)});
+    if(!meta.name&&e.meta){meta.name=e.meta.method&&e.meta.method.name;meta.tz=e.meta.timezone}
+  });
+}
+function loadSholat(y,l){
+  var days={},meta={};
+  return fetchJson(apiUrl(y,l)).then(function(j){collect(j,days,meta);if(Object.keys(days).length<360)throw new Error('incomplete')})
+    .catch(function(){
+      days={};meta={};var ps=[];
+      for(var m=1;m<=12;m++)ps.push(fetchJson(apiUrl(y,l,m)).then(function(j){collect(j,days,meta)}));
+      return Promise.all(ps).then(function(){if(Object.keys(days).length<360)throw new Error('incomplete')});
+    })
+    .then(function(){return {days:days,meta:meta,saved:Date.now(),loc:l}});
+}
+function shStatus(msg,err){var e=$('shStatus');e.textContent=msg;e.className='shst'+(err?' err':'')}
+function shLabel(l){return l.lat!=null?'Lokasi saya':l.q}
+function shRender(){
+  var rec=sh.rec,y=sh.year;
+  if(!rec){$('shTable').innerHTML='';return}
+  var mode=$('shView').value,tod=todayUtc(),h='<table><colgroup><col class="c0"><col><col><col><col><col><col></colgroup><thead><tr><th>Tanggal</th><th>Subuh</th><th>Terbit</th><th>Zuhur</th><th>Asar</th><th>Magrib</th><th>Isya</th></tr></thead><tbody>';
+  function cells(t){return '<td>'+t[0]+'</td><td>'+t[1]+'</td><td class="zh">'+t[2]+'</td><td>'+t[3]+'</td><td>'+t[4]+'</td><td>'+t[5]+'</td>'}
+  if(mode==='jumat'){
+    var cur=-1;
+    fridaysOf(y).forEach(function(f){
+      var t=rec.days[pad(f.month+1)+'-'+pad(f.day)];if(!t)return;
+      if(f.month!==cur){cur=f.month;h+='<tr class="shm"><td colspan="7">'+BULAN[cur]+' '+y+'</td></tr>'}
+      h+='<tr class="fri'+(f.utc===tod?' tod':'')+'"><td>'+f.day+' '+BLN[f.month]+'</td>'+cells(t)+'</tr>';
+    });
+  }else{
+    var m=parseInt(mode,10),n=new Date(Date.UTC(y,m+1,0)).getUTCDate();
+    for(var d=1;d<=n;d++){
+      var t=rec.days[pad(m+1)+'-'+pad(d)];if(!t)continue;
+      var u=Date.UTC(y,m,d),wd=new Date(u).getUTCDay();
+      h+='<tr class="'+(wd===5?'fri':'')+(u===tod?' tod':'')+'"><td>'+WD[wd]+', '+d+'</td>'+cells(t)+'</tr>';
+    }
+  }
+  $('shTable').innerHTML=h+'</tbody></table>';
+}
+function shLoad(force){
+  var y=view.year,l=sh.loc,ck=shCacheKey(y,l);
+  sh.year=y;
+  $('shSub').textContent=shLabel(l)+' · '+y;
+  var cached=force?null:lsGet(ck,null);
+  if(cached&&cached.days){sh.rec=cached;shRender();shStatus('Data tersimpan di HP'+(cached.meta&&cached.meta.name?' · '+cached.meta.name:'')+(cached.meta&&cached.meta.tz?' · '+cached.meta.tz:'')+'. Ketuk Tampilkan untuk memuat ulang.');return}
+  shStatus('Memuat jadwal sholat '+y+'…');$('shGo').disabled=true;$('shGeo').disabled=true;
+  loadSholat(y,l).then(function(rec){
+    sh.rec=rec;lsSet(ck,rec);shRender();
+    shStatus('Berhasil dimuat'+(rec.meta.name?' · '+rec.meta.name:'')+(rec.meta.tz?' · '+rec.meta.tz:'')+'. Tersimpan di HP, bisa dibuka tanpa internet.');
+  }).catch(function(){
+    var old=lsGet(ck,null);
+    if(old&&old.days){sh.rec=old;shRender();shStatus('Tidak bisa terhubung. Menampilkan data tersimpan.',true)}
+    else{sh.rec=null;shRender();shStatus('Tidak bisa memuat jadwal sholat. Periksa internet, pastikan nama kota benar, lalu ketuk Tampilkan.',true)}
+  }).then(function(){$('shGo').disabled=false;$('shGeo').disabled=false});
+}
+function openSholat(){
+  $('shTitle').textContent='Jadwal sholat '+view.year;
+  var o='<option value="jumat">Hanya hari Jumat, setahun</option>';
+  for(var m=0;m<12;m++)o+='<option value="'+m+'">'+BULAN[m]+'</option>';
+  $('shView').innerHTML=o;
+  $('shView').value=(view.year===NOW_YEAR)?String(new Date().getMonth()):'jumat';
+  $('shCity').value=sh.loc.lat!=null?'':(sh.loc.q||'');
+  $('shCity').placeholder=sh.loc.lat!=null?'Lokasi saya (GPS)':'Kota, contoh: Bandung';
+  $('dSholat').showModal();
+  shLoad(false);
+}
+$('btnSholat').addEventListener('click',openSholat);
+$('shClose').addEventListener('click',function(){$('dSholat').close()});
+$('shView').addEventListener('change',shRender);
+function shGo(){
+  var v=$('shCity').value.trim();
+  if(v){sh.loc={q:v};settings.loc=sh.loc;lsSet(SKEY,settings)}
+  else if(sh.loc.lat==null&&!sh.loc.q){toast('Isi nama kota dulu');return}
+  shLoad(true);
+}
+$('shGo').addEventListener('click',shGo);
+$('shCity').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();shGo()}});
+$('shCity').addEventListener('change',function(){if(CITIES.indexOf(this.value)>=0&&this.value!==sh.loc.q)shGo()});
+$('shGeo').addEventListener('click',function(){
+  if(!navigator.geolocation){toast('Browser ini tidak mendukung lokasi');return}
+  shStatus('Mencari lokasi Anda…');
+  navigator.geolocation.getCurrentPosition(function(p){
+    sh.loc={q:'Lokasi saya',lat:Math.round(p.coords.latitude*1000)/1000,lng:Math.round(p.coords.longitude*1000)/1000};
+    settings.loc=sh.loc;lsSet(SKEY,settings);$('shCity').value='';$('shCity').placeholder='Lokasi saya (GPS)';
+    shLoad(false);
+  },function(){shStatus('Lokasi tidak bisa diakses. Izinkan lokasi di Chrome atau ketik nama kota.',true)},{timeout:15000,maximumAge:600000});
+});
+$('dBulk').addEventListener('click',function(e){if(e.target===this)closeBulk(false)});
+$('dSholat').addEventListener('click',function(e){if(e.target===this)this.close()});
+
 /* ---- Pasang aplikasi dari Chrome ---- */
 var installEvt=null;
 window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();installEvt=e;$('btnInstall').hidden=false});
@@ -793,7 +1201,7 @@ window.addEventListener('appinstalled',function(){$('btnInstall').hidden=true});
 /* ---- Mulai ---- */
 renderAll();
 checkReminders();
-setInterval(function(){checkReminders();renderNext()},60000);
+setInterval(function(){checkReminders();renderToday();renderNext()},60000);
 document.addEventListener('visibilitychange',function(){if(!document.hidden){checkReminders();renderAll()}});
 if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})})}
 })();

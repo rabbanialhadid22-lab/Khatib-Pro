@@ -1,5 +1,5 @@
 // Service worker: aplikasi tetap bisa dibuka tanpa internet.
-const CACHE = 'khatibpro-v7';
+const CACHE = 'khatibpro-v8';
 const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'];
 
 self.addEventListener('install', (e) => {
@@ -17,6 +17,8 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   const req = e.request;
   if (req.method !== 'GET') return;
+  // Jadwal sholat disimpan oleh aplikasi sendiri; jangan dicegat.
+  if (new URL(req.url).hostname === 'api.aladhan.com') return;
   e.respondWith(
     fetch(req)
       .then((res) => {
