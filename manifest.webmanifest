@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Khatib Pro — Jadwal Khutbah Jumat 2027",
+  "name": "Khatib Pro — Jadwal Khutbah Jumat",
   "short_name": "Khatib Pro",
-  "description": "Pencatat jadwal khutbah Jumat 2027 dengan pengingat H-7 dan H-1.",
+  "description": "Pencatat jadwal khutbah Jumat dengan pengingat H-7 dan H-1.",
   "lang": "id",
   "start_url": "./",
   "scope": "./",
